@@ -41,46 +41,62 @@ function Login() {
         <div className="login-right">
 
           <div className="logo">
-            <h2>MEETMIND</h2>
-            <p>AI Meeting Intelligence Platform</p>
+            <img src="/logo.png" alt="MeetMind Logo" />
           </div>
 
-          <h1>Hi Organizer</h1>
-          <p className="welcome">Welcome to MEETMIND</p>
-
-          <input
-            type="email"
-            placeholder="Email"
-          />
-
-          <input
-            type="password"
-            placeholder="Password"
-          />
-
-          <span className="forgot">Forgot Password ?</span>
-
-          <div className="divider">
-            <span></span>
-            <p>or</p>
-            <span></span>
+          <div className="login-header">
+            <h1>Hi Organizer</h1>
+            <p className="welcome">Welcome to MEETMIND</p>
           </div>
 
-          <button className="google-btn">
-            Continue with Google
-          </button>
+          <div className="form-section">
 
-          <button className="login-btn">
-            Login
-          </button>
+            <input
+              type="email"
+              placeholder="Email"
+            />
 
-          <p className="signup-text">
-            Don't have an account? <span>Sign up</span>
-          </p>
+            <input
+              type="password"
+              placeholder="Password"
+            />
+
+            <div className="forgot">
+              Forgot Password ?
+            </div>
+
+            <div className="divider">
+              <span></span>
+              <p>or</p>
+              <span></span>
+            </div>
+
+            <button className="google-btn">
+              Continue with Google
+              <img src="/google.png" alt="Google icon" />
+              
+            </button>
+
+            <button className="login-btn">
+              Login
+            </button>
+
+            <p className="signup-text">
+              Don't have an account? <span>Sign up</span>
+            </p>
+
+          </div>
 
           <div className="social-icons">
-            <span>in</span>
-            <span>GH</span>
+
+            <a href="#">
+              <img src="/github.png" alt="GitHub" />
+            </a>
+
+            <a href="#">
+              <img src="/linkedin.png" alt="LinkedIn" />
+            </a>
+
           </div>
 
         </div>
