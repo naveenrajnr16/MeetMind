@@ -89,11 +89,11 @@ function Login() {
 
           <div className="social-icons">
 
-            <a href="#">
+            <a href="https://github.com/naveenrajnr16">
               <img src="/github.png" alt="GitHub" />
             </a>
 
-            <a href="#">
+            <a href="https://www.linkedin.com/">
               <img src="/linkedin.png" alt="LinkedIn" />
             </a>
 
