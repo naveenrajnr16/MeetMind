@@ -17,9 +17,10 @@
   width:1200px;
   height:700px;
   background:white;
-  border-radius:10px;
+  border-radius:12px;
   display:flex;
   overflow:hidden;
+  box-shadow:0 10px 40px rgba(0,0,0,0.08);
 }
 
 /* LEFT SIDE */
@@ -55,6 +56,13 @@
   color:white;
   padding:5px 15px;
   border-radius:20px;
+  cursor:pointer;
+  transition:all 0.3s ease;
+}
+
+.join-btn:hover{
+  background:white;
+  color:black;
 }
 
 .user-tip{
@@ -91,6 +99,13 @@
   margin-left:8px;
   padding:5px 10px;
   border-radius:50%;
+  cursor:pointer;
+  transition:all 0.3s ease;
+}
+
+.carousel-buttons button:hover{
+  background:white;
+  color:black;
 }
 
 /* RIGHT SIDE */
@@ -142,6 +157,13 @@
   margin-bottom:15px;
   border-radius:6px;
   border:1px solid #ccc;
+  transition:all 0.3s ease;
+}
+
+.form-section input:focus{
+  border-color:#5B6CFF;
+  outline:none;
+  box-shadow:0 0 0 2px rgba(91,108,255,0.1);
 }
 
 .forgot{
@@ -149,6 +171,7 @@
   font-size:12px;
   color:red;
   margin-bottom:20px;
+  cursor:pointer;
 }
 
 /* OR DIVIDER */
@@ -180,6 +203,21 @@
   background:white;
   margin-bottom:15px;
   border-radius:6px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  cursor:pointer;
+  transition:all 0.25s ease;
+}
+
+.google-btn img{
+  width:20px;
+  height:20px;
+}
+
+.google-btn:hover{
+  background:#f5f5f5;
 }
 
 .login-btn{
@@ -191,6 +229,12 @@
   color:white;
   font-weight:bold;
   cursor:pointer;
+  transition:all 0.3s ease;
+}
+
+.login-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 15px rgba(91,108,255,0.3);
 }
 
 /* SIGNUP */
@@ -203,6 +247,7 @@
 
 .signup-text span{
   color:red;
+  cursor:pointer;
 }
 
 /* SOCIAL ICONS */
@@ -217,25 +262,9 @@
 .social-icons img{
   width:26px;
   cursor:pointer;
+  transition:all 0.3s ease;
 }
 
-.google-btn{
-  width:100%;
-  padding:12px;
-  border:1px solid #ccc;
-  background:white;
-  border-radius:6px;
-  margin-bottom:15px;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-
-  cursor:pointer;
-}
-
-.google-btn img{
-  width:20px;
-  height:20px;
+.social-icons img:hover{
+  transform:scale(1.2);
 }
