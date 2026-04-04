@@ -275,22 +275,44 @@
   box-shadow:0 10px 25px rgba(91,108,255,0.5);
 }
 
-/* RIGHT */
+/* HERO RIGHT */
 
 .hero-right{
   flex:1;
+  position:relative;
   display:flex;
   justify-content:center;
+  align-items:center;
+}
+
+/* VECTOR IMAGE */
+
+.hero-image{
+  width:320px;
+  opacity:0.9;
+  animation:float 4s ease-in-out infinite;
+}
+
+/* FLOAT ANIMATION */
+
+@keyframes float{
+  0%{ transform:translateY(0px); }
+  50%{ transform:translateY(-10px); }
+  100%{ transform:translateY(0px); }
 }
 
 /* FLOATING CARD */
 
 .hero-card{
-  width:300px;
-  padding:20px;
-  border-radius:16px;
+  position:absolute;
+  bottom:0;
+  right:40px;
 
-  background:rgba(255,255,255,0.05);
+  width:260px;
+  padding:18px;
+
+  border-radius:16px;
+  background:rgba(255,255,255,0.08);
   backdrop-filter:blur(20px);
   border:1px solid rgba(255,255,255,0.1);
 
@@ -320,4 +342,17 @@
 
 .summary{
   background:rgba(255,255,255,0.04);
+}
+
+
+/* GLOW BACKGROUND */
+
+.hero-right::before{
+  content:"";
+  position:absolute;
+  width:300px;
+  height:300px;
+  background:radial-gradient(circle,rgba(91,108,255,0.4),transparent);
+  filter:blur(80px);
+  z-index:0;
 }

@@ -35,6 +35,13 @@ function Dashboard() {
 
           <div className="hero-right">
 
+            <img
+              src="/src/assets/hero-ai.svg"
+              alt="AI Illustration"
+              className="hero-image"
+            />
+
+
             <div className="hero-card">
               <h4>AI Summary</h4>
               <p>• Launch scheduled next week</p>
