@@ -14,7 +14,7 @@ function Navbar() {
 
       <div className="nav-right">
         <input placeholder="Search..." />
-        <span>🔔</span>
+        <span className="bell">🔔</span>
         <div className="profile"></div>
       </div>
 

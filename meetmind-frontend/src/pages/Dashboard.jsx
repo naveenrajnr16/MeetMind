@@ -8,7 +8,7 @@ function Dashboard() {
 
       <Navbar />
 
-      <div className="dashboard-content">
+      <div className="container">
 
         {/* Greeting */}
         <div className="greeting">
@@ -16,16 +16,44 @@ function Dashboard() {
           <p>Here is your meeting activity today</p>
         </div>
 
-        {/* Stats */}
-        <div className="stats">
+        <div className="hero">
 
-          <StatCard title="Total Meetings" value="12" type="meetings" />
-          <StatCard title="Tasks Completed" value="25 / 33" type="completed" />
-          <StatCard title="Upcoming Tasks" value="3" type="upcoming" />
+          <div className="hero-left">
+            <h1>
+              Turn Meetings Into <span>Actionable Insights</span>
+            </h1>
+
+            <p>
+              Let MeetMind automatically summarize your meetings,
+              generate tasks, and boost productivity using AI.
+            </p>
+
+            <button className="hero-btn">
+              Start New Meeting
+            </button>
+          </div>
+
+          <div className="hero-right">
+
+            <div className="hero-card">
+              <h4>AI Summary</h4>
+              <p>• Launch scheduled next week</p>
+              <p>• Design improvements required</p>
+              <p>• Marketing strategy finalized</p>
+            </div>
+
+          </div>
 
         </div>
 
-        {/* Main Content */}
+        {/* Stats */}
+        <div className="stats">
+          <StatCard title="Total Meetings" value="12" type="meetings" />
+          <StatCard title="Tasks Completed" value="25 / 33" type="completed" />
+          <StatCard title="Upcoming Tasks" value="3" type="upcoming" />
+        </div>
+
+        {/* Main Section */}
         <div className="main-section">
 
           <div className="recent-meetings">
@@ -56,7 +84,6 @@ function Dashboard() {
 
         </div>
 
-        {/* Upload Button */}
         <button className="upload-btn">
           + Upload Meeting
         </button>
