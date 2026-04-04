@@ -1,21 +1,36 @@
+import { useState } from "react";
+
 function Navbar() {
+
+  const [active, setActive] = useState("Home");
+
+  const menu = ["Home", "Meetings", "Tasks"];
+
   return (
-    <div className="navbar">
+    <div className="navbar-wrapper">
 
-      <div className="nav-left">
-        <h2>MeetMind</h2>
+      {/* LOGO */}
+      <div className="nav-logo">
+        MeetMind
       </div>
 
-      <div className="nav-center">
-        <span>Home</span>
-        <span>Meetings</span>
-        <span>Tasks</span>
+      {/* CENTER PILL NAV */}
+      <div className="nav-pill">
+        {menu.map((item) => (
+          <span
+            key={item}
+            className={active === item ? "active" : ""}
+            onClick={() => setActive(item)}
+          >
+            {item}
+          </span>
+        ))}
       </div>
 
-      <div className="nav-right">
-        <input placeholder="Search..." />
-        <span className="bell">🔔</span>
-        <div className="profile"></div>
+      {/* RIGHT SIDE */}
+      <div className="nav-actions">
+        <button className="login-btn">Log in</button>
+        <button className="demo-btn">Upload</button>
       </div>
 
     </div>
