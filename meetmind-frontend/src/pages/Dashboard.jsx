@@ -19,9 +19,9 @@ function Dashboard() {
         {/* Stats */}
         <div className="stats">
 
-          <StatCard title="Total Meetings" value="12" />
-          <StatCard title="Tasks Completed" value="25 / 33" />
-          <StatCard title="Upcoming Tasks" value="3" />
+          <StatCard title="Total Meetings" value="12" type="meetings" />
+          <StatCard title="Tasks Completed" value="25 / 33" type="completed" />
+          <StatCard title="Upcoming Tasks" value="3" type="upcoming" />
 
         </div>
 
