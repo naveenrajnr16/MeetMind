@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import UploadMeeting from "./pages/UploadMeeting";
+import Tasks from "./pages/Tasks";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/upload" element={<UploadMeeting />} />
+        <Route path="/tasks" element={<Tasks />} />
       </Routes>
 
     </BrowserRouter>

@@ -1,39 +1,86 @@
-import { useState } from "react";
+import {
+  useNavigate,
+  useLocation
+} from "react-router-dom";
 
 function Navbar() {
 
-  const [active, setActive] = useState("Home");
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  const menu = ["Home", "Meetings", "Tasks"];
+  const menu = [
+    {
+      name: "Home",
+      path: "/dashboard"
+    },
+    {
+      name: "Upload",
+      path: "/upload"
+    },
+    {
+      name: "Tasks",
+      path: "/tasks"
+    }
+  ];
 
   return (
+
     <div className="navbar-wrapper">
 
       {/* LOGO */}
-      <div className="nav-logo">
+
+      <div
+        className="nav-logo"
+        onClick={() => navigate("/dashboard")}
+      >
         MeetMind
       </div>
 
-      {/* CENTER PILL NAV */}
+      {/* CENTER NAV */}
+
       <div className="nav-pill">
+
         {menu.map((item) => (
+
           <span
-            key={item}
-            className={active === item ? "active" : ""}
-            onClick={() => setActive(item)}
+            key={item.name}
+
+            className={
+              location.pathname === item.path
+              ? "active"
+              : ""
+            }
+
+            onClick={() => navigate(item.path)}
           >
-            {item}
+
+            {item.name}
+
           </span>
+
         ))}
+
       </div>
 
       {/* RIGHT SIDE */}
+
       <div className="nav-actions">
-        <button className="login-btn">Log in</button>
-        <button className="demo-btn">Upload</button>
+
+        <button className="login-btn">
+          Log in
+        </button>
+
+        <button
+          className="demo-btn"
+          onClick={() => navigate("/upload")}
+        >
+          Upload
+        </button>
+
       </div>
 
     </div>
+
   );
 }
 

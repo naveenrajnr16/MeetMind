@@ -1,0 +1,177 @@
+.tasks-page{
+  min-height:100vh;
+  background:linear-gradient(135deg,#0f172a,#111827,#0f172a);
+  color:white;
+}
+
+/* CONTAINER */
+
+.tasks-container{
+  max-width:1500px;
+  margin:auto;
+
+  padding:50px 70px 100px;
+}
+
+/* HERO */
+
+.tasks-hero{
+  text-align:center;
+}
+
+.tasks-hero h1{
+  font-size:64px;
+  line-height:1.1;
+}
+
+.tasks-hero span{
+  background:linear-gradient(90deg,#5B6CFF,#7C3AED);
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.tasks-hero p{
+  margin:auto;
+  margin-top:20px;
+
+  max-width:700px;
+
+  color:#94a3b8;
+  font-size:20px;
+  line-height:1.7;
+}
+
+/* BOARD */
+
+.board{
+  margin-top:70px;
+
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+
+  gap:30px;
+}
+
+/* COLUMN */
+
+.column{
+  background:rgba(255,255,255,0.04);
+
+  border:1px solid rgba(255,255,255,0.08);
+
+  border-radius:28px;
+
+  padding:25px;
+
+  backdrop-filter:blur(20px);
+}
+
+/* HEADER */
+
+.column-header{
+  display:flex;
+  align-items:center;
+
+  gap:12px;
+
+  margin-bottom:25px;
+}
+
+.column-header h3{
+  font-size:26px;
+}
+
+.todo{
+  color:#f59e0b;
+}
+
+.progress{
+  color:#5B6CFF;
+}
+
+.complete{
+  color:#10b981;
+}
+
+/* TASK CARD */
+
+.task-card{
+  padding:22px;
+
+  border-radius:22px;
+
+  background:rgba(255,255,255,0.05);
+
+  border:1px solid rgba(255,255,255,0.08);
+
+  margin-bottom:20px;
+
+  transition:0.3s;
+}
+
+.task-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* PRIORITY */
+
+.priority{
+  display:inline-block;
+
+  padding:6px 14px;
+
+  border-radius:20px;
+
+  font-size:13px;
+  font-weight:500;
+}
+
+.high{
+  background:rgba(239,68,68,0.15);
+  color:#ef4444;
+}
+
+.medium{
+  background:rgba(245,158,11,0.15);
+  color:#f59e0b;
+}
+
+.low{
+  background:rgba(16,185,129,0.15);
+  color:#10b981;
+}
+
+/* TITLE */
+
+.task-card h4{
+  margin-top:18px;
+
+  font-size:22px;
+  line-height:1.4;
+}
+
+/* TEXT */
+
+.task-card p{
+  margin-top:14px;
+
+  color:#94a3b8;
+  line-height:1.6;
+}
+
+/* FOOTER */
+
+.task-footer{
+  margin-top:20px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.task-footer span{
+  color:#cbd5e1;
+  font-size:14px;
+}
