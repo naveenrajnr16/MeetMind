@@ -137,7 +137,22 @@
   display:flex;
   justify-content:space-between;
   align-items:center;
+
   padding:20px 60px;
+
+  position:sticky;
+  top:0;
+  z-index:100;
+
+  background:rgba(15,23,42,0.65);
+  backdrop-filter:blur(18px);
+
+  border-bottom:1px solid rgba(255,255,255,0.06);
+
+  transition:
+    background 0.4s ease,
+    backdrop-filter 0.4s ease,
+    border 0.4s ease;
 }
 
 /* LOGO */
@@ -162,27 +177,50 @@
   border:1px solid rgba(255,255,255,0.1);
 }
 
-/* MENU ITEMS */
 
+
+/* MENU ITEMS */
 .nav-pill span{
-  padding:8px 18px;
+  position:relative;
+
+  padding:10px 20px;
   border-radius:20px;
+
   cursor:pointer;
+
   color:#cbd5f5;
-  transition:0.3s;
+  font-weight:500;
+
+  transition:
+    background 0.35s ease,
+    color 0.35s ease,
+    transform 0.25s ease,
+    box-shadow 0.35s ease;
+
+  z-index:1;
 }
 
 /* ACTIVE TAB */
 
 .nav-pill .active{
-  background:black;
+  background:rgba(255,255,255,0.12);
+
   color:white;
+
+  box-shadow:
+    0 4px 20px rgba(91,108,255,0.25);
+
+  transform:translateY(-1px);
 }
 
 /* HOVER */
 
 .nav-pill span:hover{
   color:white;
+
+  background:rgba(255,255,255,0.06);
+
+  transform:translateY(-1px);
 }
 
 /* RIGHT ACTIONS */

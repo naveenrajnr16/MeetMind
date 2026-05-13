@@ -1,6 +1,8 @@
 import "../styles/tasks.css";
 import Navbar from "../components/Navbar";
 
+import { useState } from "react";
+
 import {
   FaClock,
   FaCheckCircle,
@@ -9,7 +11,10 @@ import {
 
 function Tasks() {
 
+  const [selectedTask, setSelectedTask] = useState(null);
+
   return (
+
     <div className="tasks-page">
 
       <Navbar />
@@ -45,7 +50,22 @@ function Tasks() {
               <h3>To Do</h3>
             </div>
 
-            <div className="task-card">
+            {/* TASK 1 */}
+
+            <div
+              className="task-card"
+              onClick={() =>
+                setSelectedTask({
+                  title: "Finalize Landing Page Design",
+                  priority: "High",
+                  description:
+                    "Complete the premium UI redesign for the homepage.",
+                  deadline: "Tomorrow",
+                  assigned: "Naveen",
+                  status: "To Do"
+                })
+              }
+            >
 
               <span className="priority high">
                 High
@@ -63,7 +83,22 @@ function Tasks() {
 
             </div>
 
-            <div className="task-card">
+            {/* TASK 2 */}
+
+            <div
+              className="task-card"
+              onClick={() =>
+                setSelectedTask({
+                  title: "Prepare Client Presentation",
+                  priority: "Medium",
+                  description:
+                    "Create meeting insights presentation slides.",
+                  deadline: "Friday",
+                  assigned: "Naveen",
+                  status: "To Do"
+                })
+              }
+            >
 
               <span className="priority medium">
                 Medium
@@ -92,7 +127,20 @@ function Tasks() {
               <h3>In Progress</h3>
             </div>
 
-            <div className="task-card">
+            <div
+              className="task-card"
+              onClick={() =>
+                setSelectedTask({
+                  title: "Build Upload API",
+                  priority: "Medium",
+                  description:
+                    "Develop backend endpoint for audio uploads.",
+                  deadline: "2 Days Left",
+                  assigned: "Naveen",
+                  status: "In Progress"
+                })
+              }
+            >
 
               <span className="priority medium">
                 Medium
@@ -121,7 +169,20 @@ function Tasks() {
               <h3>Completed</h3>
             </div>
 
-            <div className="task-card">
+            <div
+              className="task-card"
+              onClick={() =>
+                setSelectedTask({
+                  title: "Create Dashboard UI",
+                  priority: "Low",
+                  description:
+                    "Finished modern dashboard interface design.",
+                  deadline: "Completed",
+                  assigned: "Naveen",
+                  status: "Completed"
+                })
+              }
+            >
 
               <span className="priority low">
                 Low
@@ -145,7 +206,68 @@ function Tasks() {
 
       </div>
 
+      {/* MODAL */}
+
+      {
+        selectedTask && (
+
+          <div
+            className="modal-overlay"
+            onClick={() => setSelectedTask(null)}
+          >
+
+            <div
+              className="task-modal"
+              onClick={(e) => e.stopPropagation()}
+            >
+
+              <h2>
+                {selectedTask.title}
+              </h2>
+
+              <span className="modal-priority">
+                {selectedTask.priority}
+              </span>
+
+              <p className="modal-description">
+                {selectedTask.description}
+              </p>
+
+              <div className="modal-details">
+
+                <div>
+                  <h4>Status</h4>
+                  <p>{selectedTask.status}</p>
+                </div>
+
+                <div>
+                  <h4>Deadline</h4>
+                  <p>{selectedTask.deadline}</p>
+                </div>
+
+                <div>
+                  <h4>Assigned To</h4>
+                  <p>{selectedTask.assigned}</p>
+                </div>
+
+              </div>
+
+              <button
+                className="close-btn"
+                onClick={() => setSelectedTask(null)}
+              >
+                Close
+              </button>
+
+            </div>
+
+          </div>
+
+        )
+      }
+
     </div>
+
   );
 }
 
