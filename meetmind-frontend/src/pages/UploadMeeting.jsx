@@ -67,12 +67,6 @@ function UploadMeeting() {
           Browse Files
         </label>
 
-        <input type="file" id="fileUpload" hidden />
-
-        <label htmlFor="fileUpload" className="browse-btn">
-          Browse Files
-        </label>
-
       </div>
 
       {/* RECORD OPTION */}
